@@ -7,7 +7,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Layout>
-        <Component {...pageProps} />
+        <div className="min-h-screen bg-gray-50">
+          <Component {...pageProps} />
+        </div>
       </Layout>
       <Toaster />
     </>
