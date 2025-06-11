@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pandas
+scikit-learn
+python-multipart
+evidently
+pymongo
+weasyprint
+jinja2
+numpy<2.0.0
