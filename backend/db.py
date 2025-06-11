@@ -3,10 +3,13 @@ from pymongo import MongoClient
 import os
 from datetime import datetime
 from dotenv import load_dotenv
-load_dotenv()
 
-client = MongoClient(os.getenv("MONGODB_URI", "mongodb://localhost:27017"))
-db = client["model_tracker"]
+# Load environment variables from backend/.env
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+
+# Get MongoDB connection string from environment variable
+client = MongoClient(os.getenv("MONGODB_URI"))
+db = client.get_database()  # Database name is already in connection string
 models_col = db["models"]
 drift_col = db["drift_reports"]
 
