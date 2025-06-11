@@ -1,4 +1,3 @@
-# README.md
 # ModelDriftTrackr
 
 A minimal full-stack app to monitor ML model performance and data drift.
